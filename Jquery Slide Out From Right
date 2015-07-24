@@ -1,3 +1,7 @@
+<!-- JSFiddle Example - This method is the second of the three. -->
+
+https://jsfiddle.net/esd5w6xq/44/
+
 <!-- jQuery -->
 
 var $content = jQuery("#slidecontent2");
