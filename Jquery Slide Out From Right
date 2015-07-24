@@ -1,0 +1,54 @@
+<!-- jQuery -->
+
+var $content = jQuery("#slidecontent2");
+var $contentwidth = jQuery("#slidecontent2").width();
+
+jQuery("#slidetrigger2").hover(
+    function() {
+        $content.stop();
+        $content.animate({left: -10});
+    }, function() {
+        $content.stop();
+        $content.animate({left: -$contentwidth - 10});   
+    }
+);
+
+<!-- HTML -->
+
+<div class="wrapper">
+    <div id="slidetrigger2">Hover Me!</div>
+    <div id="slidecontent2">Here's the content!</div>
+</div>
+
+<!-- CSS -->
+
+.wrapper{
+    overflow: hidden;
+}
+
+#slidetrigger2{
+    width: 100px;
+    height: 100px;
+    background: grey;
+    float: left;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    clear: left;
+    z-index: 5;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#slidecontent2{
+    width: 200px;
+    left: -310px;
+    height: 100px;
+    z-index: 1;
+    float: left;
+    padding-left: 10px;
+    background: #F6953D;
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+}
